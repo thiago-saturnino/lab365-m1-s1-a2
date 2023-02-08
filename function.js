@@ -23,6 +23,6 @@ password.addEventListener("change", handleChangePassword);
 
 function clicou() {
   alert(
-    `o usuário que você digitou é ${user.username} e a senha é ${user.password}`
+    `o usuário que você digitou é ${user.username} e a senha é: ${user.password}`
   );
 }
