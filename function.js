@@ -1,28 +1,28 @@
-console.log("hello world");
 var user = {
   username: "",
   password: "",
 };
-
-const handleChange = (event) => {
-  console.log(event.target.listener);
+var usuarioCorreto = {
+  username: "correto",
+  senha: "1234",
 };
 let login = document.getElementById("login");
 let username = document.getElementById("username");
 let password = document.getElementById("password");
 
-const handleChangeUserName = (event) => {
-  user.username.value;
+const handleChangeUsername = (event) => {
+  user.username = event.target.value;
 };
 const handleChangePassword = (event) => {
-  user.password.value;
+  user.password = event.target.value;
 };
 
-username.addEventListener("change", handleChangeUserName);
+login.addEventListener("click", clicou);
+username.addEventListener("change", handleChangeUsername);
 password.addEventListener("change", handleChangePassword);
 
 function clicou() {
-  alert(`o usuario é: ${user.username} e a senha é ${user.password}`);
+  alert(
+    `o usuário que você digitou é ${user.username} e a senha é ${user.password}`
+  );
 }
-
-login.addEventListener("click", clicou);
