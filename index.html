@@ -6,36 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
-    <h1>Login</h1>
-    <div style="display: flex; flex-direction: column; max-width: 100px">
-      <input
-        id="username"
-        style="margin-top: 10px; border-radius: 15px"
-        type="text"
-        placeholder="usuário"
-      />
-      <input
-        id="password"
-        style="margin-top: 10px; border-radius: 15px"
-        type="text"
-        placeholder="senha"
-      />
 
-      <button
-        id="login"
-        onclick="{clicou()}"
-        style="
-          margin-top: 10px;
-          padding: 10px;
-          border-radius: 15px;
-          background-color: gray;
-        "
-        type="text"
-      >
-        Logar
+  <body style="background-color: cyan">
+    <h1>Login</h1>
+
+    <form id="form">
+      <div style="display: flex; flex-direction: column; max-width: 100px">
+        <input
+          id="username"
+          style="margin-top: 10px; border-radius: 15px"
+          type="text"
+          placeholder="usuário"
+        />
+        <input
+          id="password"
+          style="margin-top: 10px; border-radius: 15px"
+          type="text"
+          placeholder="senha"
+        />
+
+        <button
+          id="login"
+          onclick="{clicou()}"
+          style="
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: gray;
+          "
+          type="text"
+        >
+          Logar
+        </button>
+      </div>
+    </form>
+
+    <h1>Calcular Preço do Pão</h1>
+    <input id="valor" type="" />
+    <button
+      id="calcular"
+      onclick="padariaTech()"
+      type="submit"
+      style="
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 15px;
+        background-color: gray;
+      "
+    >
+      Calcular
+    </button>
+    <div>
+      <p id="resposta">0 pães = 0.00</p>
+    </div>
+
+    <div>
+      <h1>Cronômetro</h1>
+      <p id="contador">--</p>
+      <button id="inciarContador" onclick="iniciar()" type="button">
+        Iniciar
+      </button>
+      <button id="resetarContador" onclick="resetar()" type="button">
+        Resetar
       </button>
     </div>
+
+    <div id="resultado" style="display: inline; color: aliceblue"></div>
   </body>
   <script src="./function.js"></script>
 </html>
